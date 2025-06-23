@@ -1,67 +1,32 @@
 [app]
 
-# (str) Title of your application
+# اسم التطبيق
 title = مطابقة الأسماء والأقسام
 
-# (str) Package name
+# اسم الحزمة (package)
 package.name = matchapp
-
-# (str) Package domain (needed for android/ios packaging)
 package.domain = org.example
 
-# (str) Source code where the main.py live
+# مسار مصدر الكود
 source.dir = .
 
-# (str) Source main file
-source.main = app2.py
+# نسخة التطبيق
+version = 1.0
 
-# (str) Application versioning (method 1)
-version = 1.0.0
+# متطلبات Python
+requirements = python3,kivy,pandas,openpyxl,rapidfuzz
 
-# (list) Application requirements
-requirements = python3,kivy,pandas,openpyxl,rapidfuzz,shutil
-
-# (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
-orientation = portrait
-
-# (bool) Indicate if the application should be fullscreen or not
-fullscreen = 0
-
-# (list) Permissions
-android.permissions = WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
-
-# (str) Supported Android architectures
+# تعيين معمارية المعالج (مناسب للأندرويد الحديثة)
 android.archs = armeabi-v7a, arm64-v8a
 
-# (int) Android API to use
+# إعدادات أندرويد الحديثة (SDK و NDK)
+android.sdk_api = 33
 android.api = 33
-
-# (int) Minimum API your APK will support
-android.minapi = 21
-
-# (int) Android SDK version to use
-android.sdk = 33
-
-# (str) Android NDK version to use
 android.ndk = 25b
 
-# (bool) Android entry point, default is org.kivy.android.PythonActivity
-android.entrypoint = org.kivy.android.PythonActivity
+# نسخة Build Tools يمكن تركها فارغة ليتم اختيارها تلقائياً
+# android.build_tools_version =
 
-# (str) Android app theme, default is 'import android' (AndroidManifest.xml)
-android.theme = '@android:style/Theme.Material.Light.NoActionBar'
-
-# (bool) If True, the application will be packaged into a single .apk file
-android.package_mode = apk
-
-# (str) Presplash image
-presplash.filename = presplash.png
-
-# (list) Source files to include (let empty to include all)
-source.include_exts = py,png,jpg,kv,atlas,xlsx
-
-# (list) Exclude files
-source.exclude_exts = spec
-
-# (str) Icon of the app
-icon.filename = icon.png
+# إعدادات أخرى مفيدة (اختيارية)
+fullscreen = 1
+android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
